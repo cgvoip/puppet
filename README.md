@@ -1,4 +1,4 @@
-puppet
+Puppet
 ======
 
-puppet
+This repository contains Puppet modules for administrating systems
