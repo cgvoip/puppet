@@ -1,0 +1,22 @@
+<Plugin snmp>
+  <Data "<%= @name %>">
+    Type "<%= @type %>"
+    Table <%= @table ? 'true' : 'false' %>
+    Instance "<%= @instance %>"
+<% if @instance_prefix -%>
+    InstancePrefix "<%= @instance_prefix %>"
+<% end -%>
+    Values <%= Array(@values).map { |x| %Q{"#{x}"} }.join(' ') %>
+<% if @scale -%>
+    Scale <%= @scale %>
+<% end -%>
+<% if @shift -%>
+    Shift <%= @shift %>
+<% end -%>
+<% if @ignore -%>
+   Ignore <%= Array(@ignore).map { |x| %Q{"#{x}"} }.join(' ') %>
+<% end -%>
+    InvertMatch <%= @invert_match ? 'true' : 'false' %>
+  </Data>
+</Plugin>
+ 
